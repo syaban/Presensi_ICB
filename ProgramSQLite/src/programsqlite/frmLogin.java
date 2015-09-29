@@ -31,8 +31,8 @@ public class frmLogin extends javax.swing.JFrame {
      * Creates new form frmLogin
      */
     public frmLogin() {
-        this.setAlwaysOnTop(true);
-        this.setResizable(false);
+//        this.setAlwaysOnTop(true);
+        this.setResizable(true);
         this.setVisible(true);
         initComponents();
         Toolkit tk = Toolkit.getDefaultToolkit();
@@ -51,260 +51,23 @@ public class frmLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFrame1 = new javax.swing.JFrame();
-        jFrame2 = new javax.swing.JFrame();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        background1 = new programsqlite.background();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        textstatus = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
         background11 = new programsqlite.background1();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        jbAgenda1 = new javax.swing.JButton();
+        jbAgenda2 = new javax.swing.JButton();
+        jbAgenda3 = new javax.swing.JButton();
+        jbAgenda4 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         background2 = new programsqlite.background();
         jPanel6 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jButton11 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        jlMasukkanNim = new javax.swing.JLabel();
+        jtMasukkanNim = new javax.swing.JTextField();
+        jbHadir = new javax.swing.JButton();
+        jlStatus = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        jFrame2.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jButton3.setText("jButton3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("jButton4");
-
-        jButton5.setText("jButton4");
-
-        jButton6.setText("jButton4");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(214, 214, 214)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(214, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(123, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Admin", jPanel1);
-
-        jLabel2.setText("ABSENSI ");
-
-        jLabel3.setText("ISLAMIC CHARACTER BUILDING");
-
-        jLabel1.setText("Masukkan NIM Anda disini :");
-
-        jTextField1.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentAdded(java.awt.event.ContainerEvent evt) {
-                jTextField1ComponentAdded(evt);
-            }
-        });
-        jTextField1.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-            }
-            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                jTextField1InputMethodTextChanged(evt);
-            }
-        });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField1KeyTyped(evt);
-            }
-        });
-
-        jButton1.setText("Hadir");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null}
-            },
-            new String [] {
-                "nim"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        jLabel4.setForeground(new java.awt.Color(0, 153, 0));
-
-        jButton2.setText("oke");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout background1Layout = new javax.swing.GroupLayout(background1);
-        background1.setLayout(background1Layout);
-        background1Layout.setHorizontalGroup(
-            background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background1Layout.createSequentialGroup()
-                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(background1Layout.createSequentialGroup()
-                                    .addGap(15, 15, 15)
-                                    .addComponent(jLabel1))
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(background1Layout.createSequentialGroup()
-                                    .addGap(49, 49, 49)
-                                    .addComponent(jButton1)))
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(textstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(111, 111, 111))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addGap(151, 151, 151))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(143, 143, 143)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
-        );
-        background1Layout.setVerticalGroup(
-            background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background1Layout.createSequentialGroup()
-                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(background1Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
-                        .addGap(2, 2, 2)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(background1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Peserta", jPanel2);
-
-        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
-        jFrame2.getContentPane().setLayout(jFrame2Layout);
-        jFrame2Layout.setHorizontalGroup(
-            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jFrame2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jFrame2Layout.setVerticalGroup(
-            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrame2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
-        );
+        jtabTampil = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 102));
@@ -332,47 +95,47 @@ public class frmLogin extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(255, 153, 0));
-        jButton7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("OPENING");
-        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jbAgenda1.setBackground(new java.awt.Color(255, 153, 0));
+        jbAgenda1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbAgenda1.setForeground(new java.awt.Color(255, 255, 255));
+        jbAgenda1.setText("OPENING");
+        jbAgenda1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbAgenda1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                jbAgenda1ActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(255, 153, 0));
-        jButton8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("BIG CLASS 1");
-        jButton8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        jbAgenda2.setBackground(new java.awt.Color(255, 153, 0));
+        jbAgenda2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbAgenda2.setForeground(new java.awt.Color(255, 255, 255));
+        jbAgenda2.setText("BIG CLASS 1");
+        jbAgenda2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbAgenda2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                jbAgenda2ActionPerformed(evt);
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(255, 153, 0));
-        jButton9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("BIG CLASS 2");
-        jButton9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        jbAgenda3.setBackground(new java.awt.Color(255, 153, 0));
+        jbAgenda3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbAgenda3.setForeground(new java.awt.Color(255, 255, 255));
+        jbAgenda3.setText("BIG CLASS 2");
+        jbAgenda3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbAgenda3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                jbAgenda3ActionPerformed(evt);
             }
         });
 
-        jButton10.setBackground(new java.awt.Color(255, 153, 0));
-        jButton10.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setText("CLOSING");
-        jButton10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        jbAgenda4.setBackground(new java.awt.Color(255, 153, 0));
+        jbAgenda4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbAgenda4.setForeground(new java.awt.Color(255, 255, 255));
+        jbAgenda4.setText("CLOSING");
+        jbAgenda4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbAgenda4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                jbAgenda4ActionPerformed(evt);
             }
         });
 
@@ -383,23 +146,23 @@ public class frmLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background11Layout.createSequentialGroup()
                 .addGap(386, 386, 386)
                 .addGroup(background11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbAgenda1, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
+                    .addComponent(jbAgenda2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jbAgenda3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jbAgenda4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(331, 331, 331))
         );
         background11Layout.setVerticalGroup(
             background11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background11Layout.createSequentialGroup()
                 .addGap(201, 201, 201)
-                .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
+                .addComponent(jbAgenda1, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addComponent(jbAgenda2, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                .addComponent(jbAgenda3, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addComponent(jbAgenda4, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                 .addGap(150, 150, 150))
         );
 
@@ -418,56 +181,56 @@ public class frmLogin extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(0, 204, 204));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Masukkan NIM Anda disini :");
+        jlMasukkanNim.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlMasukkanNim.setForeground(new java.awt.Color(255, 255, 255));
+        jlMasukkanNim.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlMasukkanNim.setText("Masukkan NIM Anda disini :");
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(0, 153, 51));
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTextField3.addContainerListener(new java.awt.event.ContainerAdapter() {
+        jtMasukkanNim.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jtMasukkanNim.setForeground(new java.awt.Color(0, 153, 51));
+        jtMasukkanNim.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtMasukkanNim.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jtMasukkanNim.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
-                jTextField3ComponentAdded(evt);
+                jtMasukkanNimComponentAdded(evt);
             }
         });
-        jTextField3.addInputMethodListener(new java.awt.event.InputMethodListener() {
+        jtMasukkanNim.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
             public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                jTextField3InputMethodTextChanged(evt);
+                jtMasukkanNimInputMethodTextChanged(evt);
             }
         });
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jtMasukkanNim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jtMasukkanNimActionPerformed(evt);
             }
         });
-        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+        jtMasukkanNim.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField3KeyTyped(evt);
+                jtMasukkanNimKeyTyped(evt);
             }
         });
 
-        jButton11.setBackground(new java.awt.Color(255, 204, 0));
-        jButton11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton11.setText("Hadir");
-        jButton11.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+        jbHadir.setBackground(new java.awt.Color(255, 204, 0));
+        jbHadir.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jbHadir.setText("Hadir");
+        jbHadir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbHadir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton11MouseClicked(evt);
+                jbHadirMouseClicked(evt);
             }
         });
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        jbHadir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                jbHadirActionPerformed(evt);
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 51));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlStatus.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlStatus.setForeground(new java.awt.Color(255, 255, 51));
+        jlStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jPanel6.setLocation(5, 100);
 
@@ -478,26 +241,26 @@ public class frmLogin extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jtMasukkanNim, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jlStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlMasukkanNim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(94, 94, 94)
-                .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                .addComponent(jbHadir, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                 .addGap(101, 101, 101))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addComponent(jlMasukkanNim, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtMasukkanNim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                .addComponent(jbHadir, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
 
@@ -507,10 +270,10 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jPanel7.setSize(100, 100);
 
-        jTable2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTable2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jTable2.setForeground(new java.awt.Color(0, 153, 102));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jtabTampil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jtabTampil.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jtabTampil.setForeground(new java.awt.Color(0, 153, 102));
+        jtabTampil.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -521,7 +284,7 @@ public class frmLogin extends javax.swing.JFrame {
                 "nim"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(jtabTampil);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -620,49 +383,11 @@ public class frmLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_formMouseClicked
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jTextField1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jTextField1ComponentAdded
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ComponentAdded
-
-    private void jTextField1InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTextField1InputMethodTextChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1InputMethodTextChanged
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
-        jLabel4.setText("");
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1KeyTyped
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
-        enable_form();
-        clear();
-    }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        //        input_data();
-        input_absen();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        bam_id = jTextField2.getText();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jbAgenda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgenda1ActionPerformed
         // TODO add your handling code here:
         bam_id = "001";
         JOptionPane.showMessageDialog(rootPane, "Anda berhasil mensetting bam_id=001");
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_jbAgenda1ActionPerformed
 
     private void jTabbedPane2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane2MouseClicked
         // TODO add your handling code here:
@@ -671,52 +396,50 @@ public class frmLogin extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTabbedPane2MouseClicked
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jbAgenda2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgenda2ActionPerformed
         // TODO add your handling code here:
         bam_id = "002";
         JOptionPane.showMessageDialog(rootPane, "Anda berhasil mensetting bam_id=002");        
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_jbAgenda2ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void jbAgenda3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgenda3ActionPerformed
         // TODO add your handling code here:
         bam_id = "003";
         JOptionPane.showMessageDialog(rootPane, "Anda berhasil mensetting bam_id=003");        
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_jbAgenda3ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void jbAgenda4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgenda4ActionPerformed
         // TODO add your handling code here:
         bam_id = "004";
         JOptionPane.showMessageDialog(rootPane, "Anda berhasil mensetting bam_id=004");
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_jbAgenda4ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void jbHadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHadirActionPerformed
         // TODO add your handling code here:
         //        input_data();
         input_absen();
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_jbHadirActionPerformed
 
-    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+    private void jbHadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbHadirMouseClicked
         // TODO add your handling code here:
-        enable_form();
-        clear();
-    }//GEN-LAST:event_jButton11MouseClicked
+    }//GEN-LAST:event_jbHadirMouseClicked
 
-    private void jTextField3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyTyped
-        jLabel8.setText("");
+    private void jtMasukkanNimKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtMasukkanNimKeyTyped
+        jlStatus.setText("");
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3KeyTyped
+    }//GEN-LAST:event_jtMasukkanNimKeyTyped
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jtMasukkanNimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtMasukkanNimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_jtMasukkanNimActionPerformed
 
-    private void jTextField3InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTextField3InputMethodTextChanged
+    private void jtMasukkanNimInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jtMasukkanNimInputMethodTextChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3InputMethodTextChanged
+    }//GEN-LAST:event_jtMasukkanNimInputMethodTextChanged
 
-    private void jTextField3ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jTextField3ComponentAdded
+    private void jtMasukkanNimComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jtMasukkanNimComponentAdded
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ComponentAdded
+    }//GEN-LAST:event_jtMasukkanNimComponentAdded
 
     /**
      * @param args the command line arguments
@@ -754,61 +477,24 @@ public class frmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private programsqlite.background background1;
     private programsqlite.background1 background11;
     private programsqlite.background background2;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JFrame jFrame1;
-    private javax.swing.JFrame jFrame2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JLabel textstatus;
+    private javax.swing.JButton jbAgenda1;
+    private javax.swing.JButton jbAgenda2;
+    private javax.swing.JButton jbAgenda3;
+    private javax.swing.JButton jbAgenda4;
+    private javax.swing.JButton jbHadir;
+    private javax.swing.JLabel jlMasukkanNim;
+    private javax.swing.JLabel jlStatus;
+    private javax.swing.JTextField jtMasukkanNim;
+    private javax.swing.JTable jtabTampil;
     // End of variables declaration//GEN-END:variables
-    public void input_data(){
-        java.sql.Connection koneksi = new Connect().ConnectDB();
-        try{
-            String sql="insert into userpass(username,password,idUser) values(?,?,?)";
-            java.sql.PreparedStatement stmt = koneksi.prepareStatement(sql);
-            try{
-                stmt.setString(3, jTextField1.getText());
-                stmt.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
-                clear();
-            }catch(SQLException se){
-                JOptionPane.showMessageDialog(null, "Data gagal disimpan");
-            }stmt.close();
-        }catch(Exception e){}
-        
-    }
     public void input_absen(){
         java.sql.Connection koneksi = new Connect().ConnectDB();
         try{
@@ -816,17 +502,16 @@ public class frmLogin extends javax.swing.JFrame {
             String sql="insert into presensi(nim, bam_id) values(?,?)";
             java.sql.PreparedStatement stmt = koneksi.prepareStatement(sql);
             try{
-                stmt.setString(1, jTextField3.getText());
+                stmt.setString(1, jtMasukkanNim.getText());
                 stmt.setString(2, bam_id);
                 stmt.executeUpdate();
-                jLabel8.setText("Nim berhasil disimpan..");
+                jlStatus.setText("Nim berhasil disimpan..");
 //                JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
-                jTextField3.setText("");
+                jtMasukkanNim.setText("");
                 tampil_tabel();
-                clear();
             }catch(SQLException se){
                 JOptionPane.showMessageDialog(rootPane, "Data yang Anda inputkan telah terdaftar!");
-                jTextField3.setText("");
+                jtMasukkanNim.setText("");
             }stmt.close();
         }catch(Exception e){}
         
@@ -835,7 +520,7 @@ public class frmLogin extends javax.swing.JFrame {
     public void tampil_tabel(){
            Object[] Baris={"NIM Mahasiswa MPAI"};
            DftTabMode1 = new DefaultTableModel(null, Baris);
-           jTable2.setModel(DftTabMode1);
+           jtabTampil.setModel(DftTabMode1);
 
            //panggil method koneksi
             java.sql.Connection koneksi = new Connect().ConnectDB();
@@ -843,7 +528,7 @@ public class frmLogin extends javax.swing.JFrame {
            //untuk menampilkan di table
            try{
 //               String sql="Select nim from absen order by nim asc";
-               String sql="Select nim from presensi order by nim asc";
+               String sql="Select nim from presensi order by bam_id asc";
                java.sql.Statement stmt=koneksi.createStatement();
                java.sql.ResultSet rslt=stmt.executeQuery(sql);
                while(rslt.next()){
@@ -854,13 +539,4 @@ public class frmLogin extends javax.swing.JFrame {
            }catch(Exception ex){}
     }
     
-    public void clear(){
-        jTextField1.setText("");
-    }
-    
-    public void enable_form(){
-        jTextField1.enable(true);
-        jTextField1.requestFocusInWindow();
-    }
-
 }
