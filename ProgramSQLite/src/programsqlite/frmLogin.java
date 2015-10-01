@@ -9,8 +9,17 @@ package programsqlite;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.WindowConstants;
@@ -26,7 +35,9 @@ import sun.awt.SunToolkit;
 public class frmLogin extends javax.swing.JFrame {
     private DefaultTableModel DftTabMode1;
     String bam_id;
+    String productName;
     Connection conn = null;
+    File file;
     /**
      * Creates new form frmLogin
      */
@@ -68,6 +79,10 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtabTampil = new javax.swing.JTable();
+        jbBacaFile = new javax.swing.JButton();
+        jtPilihFile = new javax.swing.JTextField();
+        jbPilihFile = new javax.swing.JButton();
+        jlPilihFile = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 102));
@@ -303,6 +318,28 @@ public class frmLogin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jbBacaFile.setText("Baca File");
+        jbBacaFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBacaFileActionPerformed(evt);
+            }
+        });
+
+        jtPilihFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtPilihFileActionPerformed(evt);
+            }
+        });
+
+        jbPilihFile.setText("Cari");
+        jbPilihFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbPilihFileActionPerformed(evt);
+            }
+        });
+
+        jlPilihFile.setText("Pilih File yang akan dibaca :");
+
         javax.swing.GroupLayout background2Layout = new javax.swing.GroupLayout(background2);
         background2.setLayout(background2Layout);
         background2Layout.setHorizontalGroup(
@@ -313,6 +350,20 @@ public class frmLogin extends javax.swing.JFrame {
                 .addGap(275, 275, 275)
                 .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(161, 161, 161))
+            .addGroup(background2Layout.createSequentialGroup()
+                .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(background2Layout.createSequentialGroup()
+                        .addGap(285, 285, 285)
+                        .addComponent(jbBacaFile))
+                    .addGroup(background2Layout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlPilihFile)
+                            .addGroup(background2Layout.createSequentialGroup()
+                                .addComponent(jtPilihFile, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jbPilihFile)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background2Layout.setVerticalGroup(
             background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,7 +374,15 @@ public class frmLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background2Layout.createSequentialGroup()
                 .addGap(234, 234, 234)
                 .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(283, 283, 283))
+                .addGap(85, 85, 85)
+                .addComponent(jlPilihFile)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtPilihFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbPilihFile))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jbBacaFile)
+                .addGap(116, 116, 116))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -441,6 +500,38 @@ public class frmLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtMasukkanNimComponentAdded
 
+    private void jbBacaFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBacaFileActionPerformed
+        // TODO add your handling code here:
+        try {
+            sendFiletoDatabase(file);
+        }catch(Exception err){
+            System.out.println("Baca File gagal");
+        }
+    }//GEN-LAST:event_jbBacaFileActionPerformed
+
+    private void jtPilihFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtPilihFileActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtPilihFileActionPerformed
+
+    private void jbPilihFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPilihFileActionPerformed
+        // TODO add your handling code here:
+        JFileChooser browseFileChooser = new JFileChooser();
+        int returnVal = browseFileChooser.showOpenDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            file = browseFileChooser.getSelectedFile();
+            try {
+                // What to do with the file, e.g. display it in a TextArea
+                jtPilihFile.setText(file.getPath());
+                productName = file.getName();
+            } catch (Exception ex) {
+                System.out.println("problem accessing file" + file.getAbsolutePath());
+            }
+        } else {
+            System.out.println("File access cancelled by user.");
+        }// TODO add your handling code here:
+        jbHadir.isSelected();
+    }//GEN-LAST:event_jbPilihFileActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -489,10 +580,14 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JButton jbAgenda2;
     private javax.swing.JButton jbAgenda3;
     private javax.swing.JButton jbAgenda4;
+    private javax.swing.JButton jbBacaFile;
     private javax.swing.JButton jbHadir;
+    private javax.swing.JButton jbPilihFile;
     private javax.swing.JLabel jlMasukkanNim;
+    private javax.swing.JLabel jlPilihFile;
     private javax.swing.JLabel jlStatus;
     private javax.swing.JTextField jtMasukkanNim;
+    private javax.swing.JTextField jtPilihFile;
     private javax.swing.JTable jtabTampil;
     // End of variables declaration//GEN-END:variables
     public void input_absen(){
@@ -528,7 +623,7 @@ public class frmLogin extends javax.swing.JFrame {
            //untuk menampilkan di table
            try{
 //               String sql="Select nim from absen order by nim asc";
-               String sql="Select nim from presensi order by bam_id asc";
+               String sql="Select nim from presensi order by bam_id desc";
                java.sql.Statement stmt=koneksi.createStatement();
                java.sql.ResultSet rslt=stmt.executeQuery(sql);
                while(rslt.next()){
@@ -537,6 +632,30 @@ public class frmLogin extends javax.swing.JFrame {
                    DftTabMode1.addRow(dataField);
                }
            }catch(Exception ex){}
+    }
+    
+    public void sendFiletoDatabase(File file) throws FileNotFoundException, IOException, SQLException{
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String temp;
+//        ArrayList<String> hasil = new ArrayList<String>();
+        java.sql.Connection koneksi = new Connect().ConnectDB();
+        while((temp = br.readLine()) != null) {
+            String sql="insert into presensi(nim, bam_id) values(?,?)";
+            java.sql.PreparedStatement stmt = koneksi.prepareStatement(sql);
+            try{
+                stmt.setString(1, temp);
+                stmt.setString(2, bam_id);
+                stmt.executeUpdate();
+//                jlStatus.setText("Nim berhasil disimpan..");
+//                JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
+                jtMasukkanNim.setText("");
+                tampil_tabel();
+            }catch(SQLException se){
+                JOptionPane.showMessageDialog(rootPane, "Data yang Anda inputkan telah terdaftar!");
+                jtMasukkanNim.setText("");
+            }stmt.close();
+        }
+        JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
     }
     
 }
